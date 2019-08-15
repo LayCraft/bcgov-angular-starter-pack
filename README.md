@@ -1,3 +1,9 @@
+What it has: 
+- Lazy loading for authenticated and anonymous functionality
+- The BCGov Bootstrap theme
+- Docker development files in place
+- The BCGov Logo and header/footer branding.
+
 # bcgov-angular-starter-pack
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.

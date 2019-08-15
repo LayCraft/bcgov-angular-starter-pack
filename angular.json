@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "BCGovFEStarterPack": {
+    "bcgov-angular-starter-pack": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/BCGovFEStarterPack",
+            "outputPath": "dist/bcgov-angular-starter-pack",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "BCGovFEStarterPack:build"
+            "browserTarget": "bcgov-angular-starter-pack:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "BCGovFEStarterPack:build:production"
+              "browserTarget": "bcgov-angular-starter-pack:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "BCGovFEStarterPack:build"
+            "browserTarget": "bcgov-angular-starter-pack:build"
           }
         },
         "test": {
@@ -117,15 +117,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "BCGovFEStarterPack:serve"
+            "devServerTarget": "bcgov-angular-starter-pack:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "BCGovFEStarterPack:serve:production"
+              "devServerTarget": "bcgov-angular-starter-pack:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "BCGovFEStarterPack"
+  "defaultProject": "bcgov-angular-starter-pack"
 }

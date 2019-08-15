@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-
 
 const routes: Routes = [
   {
-    path:'',
-    component: LandingPageComponent
+    path:'anonymous',
+    loadChildren: () => import('./anonymous/anonymous.module').then(mod=>mod.AnonymousModule)
   },
   {
-    path:'**', component: NotFoundComponent
-  }
+    path:'authenticated',
+    loadChildren: () => import('./authenticated/authenticated.module').then(mod=>mod.AuthenticatedModule)
+  },
+  {
+    path:'',
+    redirectTo: '',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({

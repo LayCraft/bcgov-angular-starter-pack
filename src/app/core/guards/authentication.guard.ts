@@ -21,7 +21,7 @@ export class AuthenticationGuard implements CanActivate {
       return of(true);
     } else {
       // notify the user that they can't navigate here. More of a demo thing. These links shouldn't be shown or should be disabled.
-      this.notificationQueueService.addNotification('You cannot route here because you have not authenticated. Please log in.');
+      this.notificationQueueService.addNotification('You cannot route here because you have not authenticated. Please log in.', 'danger');
       return of(false);
     }
   }

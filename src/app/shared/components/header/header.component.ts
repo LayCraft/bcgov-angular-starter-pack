@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/core/services/authentication.service';
+import { NotificationQueueService } from 'src/app/core/services/notification-queue.service';
 
 @Component({
   selector: 'app-header',
@@ -8,14 +9,27 @@ import { AuthenticationService } from 'src/app/core/services/authentication.serv
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  user: string;
+  user: string = '';
   constructor(
     private router: Router,
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
+    private notificationQueueService: NotificationQueueService,
   ) { }
 
   ngOnInit() {
-    this.authenticationService.user.subscribe(u => this.user = u);
+    this.authenticationService.user.subscribe(u => {
+      if (this.user === '') {
+        // this is the first page visit. Just skip the notifications.
+        // If it were null it came after a logout.
+      } else if (!u) {
+        // User signed out because behaviour subject was blank
+        this.notificationQueueService.addNotification('User has logged out.', 'warning');
+      } else {
+        // User signed in because behaviour subject was not blank
+        this.notificationQueueService.addNotification(`${u} has been logged in successfully.`, 'success');
+      }
+      this.user = u;
+    });
   }
   login() {
     this.authenticationService.login();

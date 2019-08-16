@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
+import { AuthenticationGuard } from './core/guards/authentication.guard';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent, pathMatch: 'full' },
@@ -11,6 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'authenticated',
+    canActivate: [AuthenticationGuard],
     loadChildren: () => import('./authenticated/authenticated.module').then(mod => mod.AuthenticatedModule)
   },
   {

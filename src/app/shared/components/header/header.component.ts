@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/core/services/authentication.service';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +8,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  user: string;
   constructor(
-    private router: Router
+    private router: Router,
+    private authenticationService: AuthenticationService
   ) { }
 
   ngOnInit() {
+    this.authenticationService.user.subscribe(u => this.user = u);
+  }
+  login() {
+    this.authenticationService.login();
+  }
+  logout() {
+    this.authenticationService.logout();
   }
   homeButton() {
     // this is done without a routerlink because you will want to route the user back to a place

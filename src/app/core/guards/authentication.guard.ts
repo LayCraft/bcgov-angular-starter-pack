@@ -8,6 +8,9 @@ import { NotificationQueueService } from '../services/notification-queue.service
   providedIn: 'root'
 })
 export class AuthenticationGuard implements CanActivate {
+  // this checks if the user is authenticated. If they are not they can't route to a guarded route
+  // We seperate concerns about authentication and authorization.
+
   constructor(
     private authenticationService: AuthenticationService,
     private notificationQueueService: NotificationQueueService

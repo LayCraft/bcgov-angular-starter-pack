@@ -4,6 +4,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
 const routes: Routes = [
+  { path: '', component: LandingPageComponent, pathMatch: 'full' },
   {
     path: 'anonymous',
     loadChildren: () => import('./anonymous/anonymous.module').then(mod => mod.AnonymousModule)
@@ -11,11 +12,6 @@ const routes: Routes = [
   {
     path: 'authenticated',
     loadChildren: () => import('./authenticated/authenticated.module').then(mod => mod.AuthenticatedModule)
-  },
-  {
-    path: '',
-    component: LandingPageComponent,
-    pathMatch: 'full'
   },
   {
     path: '**',

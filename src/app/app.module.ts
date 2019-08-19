@@ -21,6 +21,7 @@ import { TestComponent } from './test/test.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
+    FormsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: UnauthorizedInterceptor, multi: true },

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { POSTAL_CODE } from 'src/app/core/constants/regex.constants';
 export class DummyForm {
   firstName: string;
   lastName: string;
@@ -19,6 +20,7 @@ export class DummyForm {
 export class SecretFormComponent implements OnInit {
   model: DummyForm;
   submitted = false;
+  postalPattern = POSTAL_CODE;
 
   constructor() { }
 

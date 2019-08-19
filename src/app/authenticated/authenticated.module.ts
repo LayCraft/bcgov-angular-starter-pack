@@ -9,7 +9,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 @NgModule({
   imports: [
     CommonModule,
-    AuthenticatedRoutingModule
+    AuthenticatedRoutingModule,
   ],
   declarations: [
     SecretPageComponent,

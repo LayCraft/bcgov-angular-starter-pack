@@ -5,11 +5,15 @@ import { SecretPageComponent } from './secret-page/secret-page.component';
 import { AuthenticatedComponent } from '../authenticated/authenticated.component';
 import { SecretFormComponent } from './secret-form/secret-form.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
     CommonModule,
-    AuthenticatedRoutingModule
+    AuthenticatedRoutingModule,
+    FormsModule,
+    NgbModule,
   ],
   declarations: [
     SecretPageComponent,

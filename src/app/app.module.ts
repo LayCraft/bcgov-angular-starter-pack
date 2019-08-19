@@ -19,7 +19,6 @@ import { TestComponent } from './test/test.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule,
     AppRoutingModule,
     SharedModule,
   ],

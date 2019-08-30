@@ -4,8 +4,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { NotificationBannerComponent } from './components/notification-banner/notification-banner.component';
-import { MatStepperModule } from '@angular/material';
-
+import { MatStepperModule, MatCheckboxModule, MatSlideToggleModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,10 @@ import { MatStepperModule } from '@angular/material';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     MatStepperModule,
+    MatCheckboxModule,
+    MatSlideToggleModule,
   ],
   exports: [
     HeaderComponent,
@@ -26,6 +29,8 @@ import { MatStepperModule } from '@angular/material';
 
     // Material exports
     MatStepperModule,
+    MatCheckboxModule,
+    MatSlideToggleModule,
   ]
 })
 export class SharedModule { }

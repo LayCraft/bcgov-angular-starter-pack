@@ -5,12 +5,15 @@ import { AnonymousFormComponent } from './anonymous-form/anonymous-form.componen
 import { AnonymousComponent } from '../anonymous/anonymous.component';
 import { MatDemoComponent } from './mat-demo/mat-demo.component';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     AnonymousRoutingModule,
-    SharedModule // need this for the material components
+    SharedModule, // need this for the material components
+    FormsModule,
+    ReactiveFormsModule,
   ],
   declarations: [AnonymousFormComponent, AnonymousComponent, MatDemoComponent]
 })

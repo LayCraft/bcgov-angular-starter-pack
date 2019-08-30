@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MatDemoComponent implements OnInit {
 
   constructor() { }
-
+  name: string;
   ngOnInit() {
   }
 

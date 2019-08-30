@@ -3,6 +3,11 @@ What it has:
 - The BCGov Bootstrap theme
 - Docker development files in place
 - The BCGov Logo and header/footer branding.
+- Angular Material style sheet to make the components match government colours.
+- Angular Material Stepper demo and a few other components loaded into the unauthenticated area.
+
+# [Interactive Demo](https://laycraft.github.io/bcgov-angular-starter-pack/)
+
 
 # bcgov-angular-starter-pack
 

@@ -20,7 +20,7 @@
       <div class="card-body">
         <span class="h3">Anonymous Form</span>
         <p>
-          Try visiting this lazy loaded area for anonymous (signed out) users.
+          Try visiting this lazy loaded area for anonymous (signed out) users. Anyone can visit this link and it loads a module with Angular Material components.
         </p>
         <button class="btn btn-primary" routerLink="/anonymous">Anonymous Form</button>
       </div>
@@ -28,9 +28,10 @@
     <div class="card">
       <img src="assets/images/Hermandad_-_friendship.jpg" class="card-img-top" alt="Craters with a lens flare.">
       <div class="card-body">
-        <span class="h3">User Login</span>
+        <span class="h3">User Accessible Page</span>
         <p>
-          The user area directs you to a login page. So have your BCeID or IDIR ready.
+          This is a link to the dashboard. If the user cannot be routed to
+          <strong>/authenticated</strong> you will see a notification pop up at the bottom. If you want to log in click the log-in button on the top banner. In a real-world usage you don't show this link or you be sure the link sends them to a login page beforehand.
         </p>
         <a class="btn btn-primary" routerLink="/authenticated">Secret Page</a>
         <!-- <a class="btn btn-primary" href="login/">Login Link</a> -->

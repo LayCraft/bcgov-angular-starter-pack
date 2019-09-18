@@ -22,6 +22,7 @@
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
+    "@bcgov/bc-sans": "^1.0.1",
     "@bcgov/bootstrap-theme": "github:bcgov/bootstrap-theme",
     "@fortawesome/fontawesome-free": "5.9.0",
     "@ng-bootstrap/ng-bootstrap": "^5.1.0",
